@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recursion</title>  re- repeat , cursion- itself :- a function invoke (call) itself in a repeated manner.
+    <script>
+        // function apple(x){
+        //      //console.warn(x)//0 1 2 3 4 5 6 7 8 9 10
+        //     if(x<10){
+        //         apple(x+1); // x ki value m 1 add hota ja rha h 
+        //     }
+        //     console.warn(x) //10 9 8 7 6 5 4 3 2 1 0
+        // }
+        // let data =0; // yaha x ki value h pehle 0 
+        // apple(data);
+
+        5 
+        function factorial(item){ /*yaha pehle 5 aaya phir code aage badh g line 21 pr vha (5-1) hua phir code line 17 pr gya vha (4) ho gy item ke ander phir 3,2,1,0 yese chal code, loop ke bahar gya hi nhi  */
+            if(item==0){
+                return 1
+            }
+           return item*factorial(item-1) /* yaha pe (item-1) :- 5-1,4-1,3-1,2-1,1-1 */
+    
+        }
+        let data =5           /*ye 5 function ke bahar h vo ek baar hi jaye g (item) k ander */  
+        console.warn(factorial(data))
+        // console.warn(5*factorial(5-1)*factorial(4-1)*factorial(3-1)*factorial(2-1)*factorial(1-1)
+
+       
+
+    </script>
+  </head>
+  <body>
+    <h1>Recursion</h1>
+  </body>
+</html>

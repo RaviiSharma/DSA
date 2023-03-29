@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Indirect Recursion</title> 
+    <script>
+    /* Indirect Recursion :- indirectly Recursion call hota h */
+
+    //   let money = 100;
+    //   let totalApple = 0;
+
+    //   function buyApple(x) {
+    //     if (x > 0) {
+    //       console.warn("I have", x, "RS and", totalApple, "apples");
+    //       buyMore(x);//apple price :- 10rs
+    //     } else {
+    //       console.warn("Now I don't have more money but have", totalApple, "apples");
+    //     }
+    //   }
+    //   function buyMore(x) {
+    //     totalApple++; //apple count increase hota rahe g
+    //     buyApple(x - 10); //apple price :- 10rs , x == money 
+    //   }
+    //    buyApple(money);
+
+//EXAMPLE 
+   function test(x)
+   {
+    // console.warn(x) //5 4 3 2 1 0 
+    if(x>0){
+        test(x-1)
+    }
+    console.warn(x)  //0 1 2 3 4 5 REASON:-(All the test functions push into the stack during execution contest !! In stack it looks like :- Test(0) Test(1) Test(2) Test(3) Test(4) Test(5)Then pop comes in the picture So test (0) print 0 test(1) print(1) and so on….)
+   }
+   
+   let data=5;
+   test(data)
+
+
+/*__________________________________________________________________________________*/
+
+/* THIS IS DIRECT RECURSION */
+// function buyApple(x) {
+//         if (x > 0) {
+//           console.warn("I have", x, "RS and", totalApple, "apples");
+        
+//           totalApple++;     //apple count increase hota rahe g
+//           buyApple(x - 10); //apple price :- 10rs , x == money 
+
+//         } else {
+//           console.warn("Now I don't have more money but have", totalApple, "apples");
+//         }
+//       }
+   
+//       buyApple(money);
+/*__________________________________________________________________________________*/
+    </script>
+  </head>
+  <body>
+    <h1>Indirect Recursion</h1>
+  </body>
+</html>
